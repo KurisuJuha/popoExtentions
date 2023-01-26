@@ -4,7 +4,7 @@ namespace JuhaKurisu.Popo.Extentions
 {
     public static class ArrayEx
     {
-        public static T[,] To2D<T>(this T[] self, bool revert)
+        public static T[,] To2D<T>(this T[] self, bool revert = false)
         {
             T[,] ret = new T[revert ? self.Length : 1, revert ? 1 : self.Length];
 
