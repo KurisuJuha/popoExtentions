@@ -1,3 +1,5 @@
+using System;
+
 namespace JuhaKurisu.Popo.Extentions
 {
     public static class ArrayEx
@@ -15,6 +17,11 @@ namespace JuhaKurisu.Popo.Extentions
             }
 
             return ret;
+        }
+
+        public static bool IsIndexWithInRange<T>(this T[] self, int index)
+        {
+            return index >= 0 && index < self.Length;
         }
     }
 }
