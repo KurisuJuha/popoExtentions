@@ -33,5 +33,15 @@ namespace JuhaKurisu.Popo.Extentions
             return true;
         }
 
+        public static bool TryGetValue<T>(this T[] self, int index, Action<T> action)
+        {
+            if (self.TryGetValue(index, out var value) && value is not null)
+            {
+                action.Invoke(value);
+                return true;
+            }
+
+            return false;
+        }
     }
 }
