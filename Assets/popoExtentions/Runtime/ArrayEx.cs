@@ -23,5 +23,15 @@ namespace JuhaKurisu.Popo.Extentions
         {
             return index >= 0 && index < self.Length;
         }
+
+        public static bool TryGetValue<T>(this T[] self, int index, out T value)
+        {
+            value = default(T);
+            if (self.IsIndexWithInRange(index)) return false;
+
+            value = self[index];
+            return true;
+        }
+
     }
 }
