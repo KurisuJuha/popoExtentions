@@ -53,5 +53,15 @@ namespace JuhaKurisu.Popo.Extentions
 
             return self;
         }
+
+        public static T[] For<T>(this T[] self, Action<int> action)
+        {
+            for (int i = 0; i < self.Length; i++)
+            {
+                action.Invoke(i);
+            }
+
+            return self;
+        }
     }
 }
