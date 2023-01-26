@@ -5,8 +5,8 @@ namespace JuhaKurisu.Popo.Extentions
         public static T[,] Rotate<T>(this T[,] self)
         {
             int rows = self.GetLength(0);
-            int colums = self.GetLength(1);
-            var result = new T[colums, rows];
+            int columns = self.GetLength(1);
+            var result = new T[columns, rows];
 
             for (int i = 0; i < rows; i++)
             {
