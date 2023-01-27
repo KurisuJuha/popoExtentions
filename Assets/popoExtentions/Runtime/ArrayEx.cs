@@ -1,6 +1,6 @@
 using System;
 
-namespace JuhaKurisu.Popo.Extentions
+namespace JuhaKurisu.PopoTools.Extentions
 {
     public static class ArrayEx
     {

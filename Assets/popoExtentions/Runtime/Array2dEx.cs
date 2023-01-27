@@ -1,4 +1,4 @@
-namespace JuhaKurisu.Popo.Extentions
+namespace JuhaKurisu.PopoTools.Extentions
 {
     public static class Array2dEx
     {
