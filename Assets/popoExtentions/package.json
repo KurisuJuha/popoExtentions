@@ -2,5 +2,8 @@
     "name": "jp.juhakurisu.popoextentions",
     "version": "1.0.0",
     "displayName": "popoExtentions",
+    "author": {
+        "name": "JuhaKurisu"
+    },
     "dependencies": {}
 }
