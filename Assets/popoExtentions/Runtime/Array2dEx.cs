@@ -37,5 +37,14 @@ namespace JuhaKurisu.PopoTools.Extentions
                 && indexY >= 0 && indexY < self.GetLength(1);
         }
 
+        public static bool TryGetValue<T>(this T[,] self, int indexX, int indexY, out T value)
+        {
+            value = default(T);
+            if (self.IsIndexWithInRange(indexX, indexY)) return false;
+
+            value = self[indexX, indexY];
+            return true;
+        }
+
     }
 }
