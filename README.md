@@ -1,5 +1,9 @@
 # popoExtentions
- 
-```
-https://github.com/KurisuJuha/popoExtentions.git?path=Assets/popoExtentions
+
+```json
+{
+    "Name" : "JuhaKurisu",
+    "URL" : "https://package.openupm.com",
+    "Scope" : "jp.juhakurisu"
+}
 ```
