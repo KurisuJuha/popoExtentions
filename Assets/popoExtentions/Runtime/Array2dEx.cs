@@ -1,3 +1,5 @@
+using System;
+
 namespace JuhaKurisu.PopoTools.Extentions
 {
     public static class Array2dEx
@@ -28,5 +30,12 @@ namespace JuhaKurisu.PopoTools.Extentions
 
             return self;
         }
+
+        public static bool IsIndexWithInRange<T>(this T[,] self, int indexX, int indexY)
+        {
+            return indexX >= 0 && indexX < self.GetLength(0)
+                && indexY >= 0 && indexY < self.GetLength(1);
+        }
+
     }
 }
