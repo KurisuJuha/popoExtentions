@@ -4,6 +4,23 @@ namespace JuhaKurisu.PopoTools.Extentions
 {
     public static class Array2dEx
     {
+        public static T[,] Fill<T>(this T[,] self, Func<int, int, T, T> func)
+        {
+            for (int x = 0; x < self.GetLength(0); x++)
+            {
+                for (int y = 0; y < self.GetLength(1); y++)
+                {
+                    self[x, y] = func.Invoke(x, y, self[x, y]);
+                }
+            }
+
+            return self;
+        }
+
+        public static T[,] Fill<T>(this T[,] self, Func<int, int, T> func) => Fill(self, (x, y, t) => func(x, y));
+
+        public static T[,] Fill<T>(this T[,] self, T item) => Fill(self, (x, y) => item);
+
         public static T[,] Rotate<T>(this T[,] self)
         {
             int rows = self.GetLength(0);
