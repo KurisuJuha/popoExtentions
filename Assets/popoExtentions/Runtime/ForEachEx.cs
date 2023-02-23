@@ -12,5 +12,17 @@ namespace JuhaKurisu.PopoTools.Extentions
 
             return value;
         }
+
+        public static IEnumerable<T> ForEach<T>(this IEnumerable<T> value, Action<T, int> action)
+        {
+            int i = 0;
+            foreach (var item in value)
+            {
+                action.Invoke(item, i);
+                i++;
+            }
+
+            return value;
+        }
     }
 }
