@@ -42,5 +42,7 @@ namespace JuhaKurisu.PopoTools.Extentions
         public static byte[] ToBytes(this Double value)
             => BitConverter.GetBytes(value);
 
+        public static byte[] ToBytes(this string value)
+            => Encoding.UTF8.GetBytes(value);
     }
 }
