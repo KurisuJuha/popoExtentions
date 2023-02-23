@@ -12,5 +12,8 @@ namespace JuhaKurisu.PopoTools.Extentions
         public static byte[] ToBytes(this byte value)
             => new byte[] { value };
 
+        public static byte[] ToBytes(this sbyte value)
+            => BitConverter.GetBytes(value);
+
     }
 }
