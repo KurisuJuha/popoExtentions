@@ -9,5 +9,8 @@ namespace JuhaKurisu.PopoTools.Extentions
         public static byte[] ToBytes(this bool value)
             => BitConverter.GetBytes(value);
 
+        public static byte[] ToBytes(this byte value)
+            => new byte[] { value };
+
     }
 }
