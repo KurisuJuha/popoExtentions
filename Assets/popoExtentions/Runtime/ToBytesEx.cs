@@ -33,5 +33,8 @@ namespace JuhaKurisu.PopoTools.Extentions
         public static byte[] ToBytes(this UInt64 value)
             => BitConverter.GetBytes(value);
 
+        public static byte[] ToBytes(this char value)
+            => BitConverter.GetBytes(value);
+
     }
 }
