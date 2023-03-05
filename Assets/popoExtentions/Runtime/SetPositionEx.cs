@@ -9,5 +9,12 @@ namespace JuhaKurisu.PopoTools.Extentions
             transform.position = new(x, transform.position.y, transform.position.z);
             return transform;
         }
+
+        public static Transform SetPositionY(this Transform transform, float y)
+        {
+            transform.position = new(transform.position.x, y, transform.position.z);
+            return transform;
+        }
+
     }
 }
